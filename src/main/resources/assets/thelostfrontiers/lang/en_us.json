@@ -1,13 +1,7 @@
 {
-  "itemGroup.thelostfrontiers": "Example Mod Tab",
-  "block.thelostfrontiers.example_block": "Example Block",
-  "item.thelostfrontiers.example_item": "Example Item",
+  "item.thelostfrontiers.silver_ingot": "Silver Ingot",
+  "item.thelostfrontiers.raw_silver": "Raw Silver"
 
-  "thelostfrontiers.configuration.title": "The Lost Frontiers Configs",
-  "thelostfrontiers.configuration.section.thelostfrontiers.common.toml": "The Lost Frontiers Configs",
-  "thelostfrontiers.configuration.section.thelostfrontiers.common.toml.title": "The Lost Frontiers Configs",
-  "thelostfrontiers.configuration.items": "Item List",
-  "thelostfrontiers.configuration.logDirtBlock": "Log Dirt Block",
-  "thelostfrontiers.configuration.magicNumberIntroduction": "Magic Number Text",
-  "thelostfrontiers.configuration.magicNumber": "Magic Number"
+
+
 }

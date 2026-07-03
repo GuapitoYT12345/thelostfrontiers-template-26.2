@@ -1,12 +1,11 @@
 package com.opaqueyardinfinity.thelostfrontiers;
 
+import com.opaqueyardinfinity.thelostfrontiers.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
@@ -31,6 +30,9 @@ public class TheLostFrontiers {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
+        ModItems.register(modEventBus);
+
+
         NeoForge.EVENT_BUS.register(this);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -44,6 +46,10 @@ public class TheLostFrontiers {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.SILVER_INGOT);
+            event.accept(ModItems.RAW_SILVER);
+        }
 
     }
 
