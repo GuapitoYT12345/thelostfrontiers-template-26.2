@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "experience": 0.25,
+  "group": "silver",
+  "ingredient": "thelostfrontiers:raw_silver",
+  "result": {
+    "id": "thelostfrontiers:silver_ingot"
+  }
+}
