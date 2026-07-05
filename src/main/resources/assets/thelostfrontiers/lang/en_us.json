@@ -5,7 +5,14 @@
   "block.thelostfrontiers.silver_block": "Block of Silver",
   "block.thelostfrontiers.raw_silver_block": "Block of Raw Silver",
   "block.thelostfrontiers.silver_ore": "Silver Ore",
-  "block.thelostfrontiers.deepslate_silver_ore": "Deepslate Silver Ore"
+  "block.thelostfrontiers.deepslate_silver_ore": "Deepslate Silver Ore",
 
-
+  "item.thelostfrontiers.silver_sword": "Silver Sword",
+  "item.thelostfrontiers.silver_pickaxe": "Silver Pickaxe",
+  "item.thelostfrontiers.silver_shovel": "Silver Shovel",
+  "item.thelostfrontiers.silver_axe": "Silver Axe",
+  "item.thelostfrontiers.silver_hoe": "Silver Hoe",
+  "item.thelostfrontiers.silver_spear": "Silver Spear"
 }
+
+

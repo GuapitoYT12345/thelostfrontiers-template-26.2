@@ -20,6 +20,14 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.SILVER_INGOT.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.RAW_SILVER.get(), ModelTemplates.FLAT_ITEM);
 
+        /* WEAPONS AND TOOLS */
+        itemModels.generateFlatItem(ModItems.SILVER_SWORD.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.SILVER_PICKAXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.SILVER_AXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.SILVER_SHOVEL.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.SILVER_HOE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateSpear(ModItems.SILVER_SPEAR.get());
+
         /* BLOCKS */
         blockModels.createTrivialCube(ModBlocks.SILVER_BLOCK.get());
         blockModels.createTrivialCube(ModBlocks.RAW_SILVER_BLOCK.get());

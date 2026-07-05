@@ -9,6 +9,7 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -79,9 +80,72 @@ public class ModRecipeProvider extends RecipeProvider {
                 .group("raw_silver")
                 .save(output);
 
+        /* WEAPONS AND TOOLS */
+        shaped(RecipeCategory.COMBAT, ModItems.SILVER_SWORD.get())
+                .pattern("A")
+                .pattern("A")
+                .pattern("S")
+                .define('A', ModItems.SILVER_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT))
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .group("silver")
+                .save(output);
 
+        shaped(RecipeCategory.TOOLS, ModItems.SILVER_PICKAXE.get())
+                .pattern("AAA")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('A', ModItems.SILVER_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT))
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .group("silver")
+                .save(output);
 
+        shaped(RecipeCategory.TOOLS, ModItems.SILVER_SHOVEL.get())
+                .pattern("A")
+                .pattern("S")
+                .pattern("S")
+                .define('A', ModItems.SILVER_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT))
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .group("silver")
+                .save(output);
 
+        shaped(RecipeCategory.TOOLS, ModItems.SILVER_AXE.get())
+                .pattern("AA")
+                .pattern("SA")
+                .pattern("S ")
+                .define('A', ModItems.SILVER_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT))
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .group("silver")
+                .save(output);
+
+        shaped(RecipeCategory.TOOLS, ModItems.SILVER_HOE.get())
+                .pattern("AA")
+                .pattern("S ")
+                .pattern("S ")
+                .define('A', ModItems.SILVER_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT))
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .group("silver")
+                .save(output);
+
+        shaped(RecipeCategory.COMBAT, ModItems.SILVER_SPEAR.get())
+                .pattern("  A")
+                .pattern(" S ")
+                .pattern("S  ")
+                .define('A', ModItems.SILVER_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.SILVER_INGOT.get()), has(ModItems.SILVER_INGOT))
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .group("silver")
+                .save(output);
     }
 
 

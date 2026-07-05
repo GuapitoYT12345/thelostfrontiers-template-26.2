@@ -63,6 +63,18 @@ public class TheLostFrontiers {
             event.accept(ModBlocks.DEEPSLATE_SILVER_ORE);
         }
 
+        if (event.getTabKey() == CreativeModeTabs.COMBAT) {
+            event.accept(ModItems.SILVER_SWORD);
+            event.accept(ModItems.SILVER_SPEAR);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.SILVER_PICKAXE);
+            event.accept(ModItems.SILVER_AXE);
+            event.accept(ModItems.SILVER_SHOVEL);
+            event.accept(ModItems.SILVER_HOE);
+        }
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
