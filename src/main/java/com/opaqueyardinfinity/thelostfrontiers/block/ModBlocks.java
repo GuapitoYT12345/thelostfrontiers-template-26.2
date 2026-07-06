@@ -2,6 +2,8 @@ package com.opaqueyardinfinity.thelostfrontiers.block;
 
 import com.opaqueyardinfinity.thelostfrontiers.TheLostFrontiers;
 import com.opaqueyardinfinity.thelostfrontiers.item.ModItems;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -30,7 +32,10 @@ public class ModBlocks {
                      .requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
 
-
+    public static ResourceKey<Block> getRK(Block block) {
+        return BuiltInRegistries.BLOCK.getResourceKey(block)
+                .orElseThrow(() -> new IllegalStateException("Block not registered: " + block));
+    }
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {
         DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, function);

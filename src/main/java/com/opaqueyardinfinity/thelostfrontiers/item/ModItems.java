@@ -1,6 +1,8 @@
 package com.opaqueyardinfinity.thelostfrontiers.item;
 
 import com.opaqueyardinfinity.thelostfrontiers.TheLostFrontiers;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
@@ -38,6 +40,12 @@ public class ModItems {
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.SILVER_ARMOR_MATERIAL, ArmorType.LEGGINGS)));
     public static final DeferredItem<Item> SILVER_BOOTS = ITEMS.registerItem("silver_boots",
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.SILVER_ARMOR_MATERIAL, ArmorType.BOOTS)));
+
+
+    public static ResourceKey<Item> getRK(Item item) {
+        return BuiltInRegistries.ITEM.getResourceKey(item)
+                .orElseThrow(() -> new IllegalStateException("Item not registered: " + item));
+    }
 
 
     public static void register(IEventBus eventBus) {

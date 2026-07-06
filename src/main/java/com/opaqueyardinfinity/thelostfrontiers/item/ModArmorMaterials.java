@@ -18,9 +18,7 @@ public class ModArmorMaterials {
 
     public static final ResourceKey<EquipmentAsset> SILVER_KEY = ResourceKey.create(ROOT_ID, Identifier.fromNamespaceAndPath(TheLostFrontiers.MOD_ID, "silver"));
 
-    public static final ArmorMaterial SILVER_ARMOR_MATERIAL = new ArmorMaterial(24,
-            makeDefense(), 9, SoundEvents.ARMOR_EQUIP_IRON,
-            1.0F, 0.0F, ModTags.Items.SILVER_REPAIRABLE, SILVER_KEY);
+    public static final ArmorMaterial SILVER_ARMOR_MATERIAL = new ArmorMaterial(24, makeDefense(), 9, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 0.0F, ModTags.Items.SILVER_REPAIRABLE, SILVER_KEY);
 
     private static Map<ArmorType, Integer> makeDefense() {
         return Maps.newEnumMap(
