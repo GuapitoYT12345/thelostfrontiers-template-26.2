@@ -16,6 +16,7 @@ import java.util.List;
 public class TheLostFrontiersDataGen {
     @SubscribeEvent
     public static void gatherClientData(GatherDataEvent.Client event) {
+        // Everything below here stays EXACTLY how you had it:
         DataGenerator generator = event.getGenerator();
         PackOutput packOutput = generator.getPackOutput();
         var lookupProvider = event.getLookupProvider();
@@ -23,10 +24,12 @@ public class TheLostFrontiersDataGen {
         generator.addProvider(true, new ModModelProvider(packOutput));
         generator.addProvider(true, new ModBlockTagsProvider(packOutput, lookupProvider));
         generator.addProvider(true, new ModItemTagsProvider(packOutput, lookupProvider));
+        generator.addProvider(true, new ModBiomeTagsProvider(packOutput, lookupProvider));
         generator.addProvider(true, new LootTableProvider(packOutput, Collections.emptySet(),
                 List.of(new LootTableProvider.SubProviderEntry(ModBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
 
         generator.addProvider(true, new ModRecipeProvider.Runner(packOutput, lookupProvider));
         generator.addProvider(true, new ModEquipmentAssetsProvider(packOutput));
+        generator.addProvider(true, new ModDatapackProvider(packOutput, lookupProvider));
     }
 }

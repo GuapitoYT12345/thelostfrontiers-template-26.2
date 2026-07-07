@@ -1,0 +1,10 @@
+{
+  "values": [
+    "minecraft:iron_ore",
+    "minecraft:deepslate_iron_ore",
+    "minecraft:diamond_ore",
+    "minecraft:deepslate_diamond_ore",
+    "minecraft:ancient_debris",
+    "thelostfrontiers:silver_block"
+  ]
+}

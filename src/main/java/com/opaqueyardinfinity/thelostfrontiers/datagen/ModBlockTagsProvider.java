@@ -35,6 +35,14 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         tag(ModTags.Blocks.INCORRECT_FOR_SILVER_TOOL)
                 .add(BlockItemIds.ANCIENT_DEBRIS.block());
 
+        tag(BlockTags.INCORRECT_FOR_STONE_TOOL)
+                .add(BlockItemIds.IRON_ORE.block())
+                .add(BlockItemIds.DEEPSLATE_IRON_ORE.block())
+                .add(BlockItemIds.DIAMOND_ORE.block())
+                .add(BlockItemIds.DEEPSLATE_DIAMOND_ORE.block())
+                .add(BlockItemIds.ANCIENT_DEBRIS.block())
+                .add(ModBlocks.getRK(ModBlocks.SILVER_BLOCK.get()));
+
         tag(BlockTags.INCORRECT_FOR_IRON_TOOL)
                 .add(BlockItemIds.DIAMOND_ORE.block())
                 .add(BlockItemIds.DEEPSLATE_DIAMOND_ORE.block());
